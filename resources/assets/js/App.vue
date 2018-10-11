@@ -1,34 +1,24 @@
 <template>
-
   <div id="app">
-    <div class="ui main container">
-      <h4>Iniciando com Vue.js</h4>
-
-      <div class="ui input">
-        <input type="text" name="titulo" v-model="titulo">
+      <navbar></navbar>
+      <div class="ui main container">
+          <router-view></router-view>
       </div>
-
-      <div>{{ titulo }}</div>
-
-    </div>
   </div>
-
 </template>
 
 <script>
+import Navbar from './components/shared/navbar/Navbar.vue'
+
   export default {
-    data() {
-      return {
-        titulo: ''
+      components: {
+          'navbar': Navbar
       }
-    }
   }
 </script>
 
 <style scoped>
-
   #app {
     padding: 55px 0 30px;
   }
-
 </style>
